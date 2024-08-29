@@ -4,53 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educesphere - Your Learning Sphere</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <h1>Welcome to Educesphere</h1>
+        <div class="container">
+            <h1>Welcome to Educesphere</h1>
+            <p>Your learning journey starts here!</p>
+        </div>
     </header>
 
-    <!-- Paragraph -->
-    <p>Educesphere is your go-to channel for educational content that simplifies learning. Explore tutorials, tips, and lessons across various subjects!</p>
+    <!-- Main Content Section -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>About Educesphere</h2>
+            <p>Educesphere is your go-to channel for educational content that simplifies learning. Explore tutorials, tips, and lessons across various subjects!</p>
+        </section>
 
-    <!-- Basic Registration Form -->
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <!-- Registration Form Section -->
+        <section class="form-section">
+            <h2>Subscribe for Updates</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone">
+                </div>
+                <input type="submit" value="Subscribe">
+            </form>
+        </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <!-- User Information Table Section -->
+        <section class="table-section">
+            <h2>User Information</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john@educesphere.com</td>
+                        <td>123-456-7890</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane@educesphere.com</td>
+                        <td>987-654-3210</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone"><br>
+        <!-- Image and External Link Section -->
+        <section class="media-section">
+            <img src="Logo.jpg" alt="Educesphere Logo">
+            <a href="https://www.youtube.com/@educesphere" target="_blank" class="youtube-link">Visit Educesphere on YouTube</a>
+        </section>
+    </main>
 
-        <input type="submit" value="Subscribe for Updates">
-    </form>
-
-    <!-- Table Displaying User Information -->
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-        </tr>
-        <tr>
-            <td>John Doe</td>
-            <td>john@educesphere.com</td>
-            <td>123-456-7890</td>
-        </tr>
-        <tr>
-            <td>Jane Smith</td>
-            <td>jane@educesphere.com</td>
-            <td>987-654-3210</td>
-        </tr>
-    </table>
-
-    <!-- Image -->
-    <img src="Logo.jpg" alt="Educesphere Logo">
-
-    <!-- External Link to Educesphere on YouTube -->
-    <a href="https://www.youtube.com/@educesphere" target="_blank">Visit Educesphere on YouTube</a>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Educesphere. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
