@@ -3,83 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educesphere - Your Learning Sphere</title>
+    <title>Telemedicine - Responsive Webpage</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>Welcome to Educesphere</h1>
-            <p>Your learning journey starts here!</p>
+            <h1>Telemedicine Services</h1>
+            <img src="Logo.jpg" alt="Telemedicine Logo" class="logo">
         </div>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <!-- Introduction Section -->
-        <section class="intro">
-            <h2>About Educesphere</h2>
-            <p>Educesphere is your go-to channel for educational content that simplifies learning. Explore tutorials, tips, and lessons across various subjects!</p>
-        </section>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <!-- Registration Form Section -->
-        <section class="form-section">
-            <h2>Subscribe for Updates</h2>
-            <form>
-                <div class="form-group">
+    <!-- Main Content and Sidebar -->
+    <div class="container">
+        <main>
+            <section id="home">
+                <h2>Home</h2>
+                <p>Welcome to our telemedicine service platform. We provide remote healthcare services to ensure you get the care you need from the comfort of your home.</p>
+            </section>
+
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Learn more about our team and mission in providing accessible and efficient healthcare services.</p>
+            </section>
+
+            <section id="services">
+                <h2>Our Services</h2>
+                <p>Explore the various telemedicine services we offer, including virtual consultations and remote diagnostics.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <form>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
+                    <input type="text" id="name" name="name" required><br>
+
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
+                    <input type="email" id="email" name="email" required><br>
+
                     <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone">
-                </div>
-                <input type="submit" value="Subscribe">
-            </form>
-        </section>
+                    <input type="tel" id="phone"><br>
 
-        <!-- User Information Table Section -->
-        <section class="table-section">
-            <h2>User Information</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John Doe</td>
-                        <td>john@educesphere.com</td>
-                        <td>123-456-7890</td>
-                    </tr>
-                    <tr>
-                        <td>Jane Smith</td>
-                        <td>jane@educesphere.com</td>
-                        <td>987-654-3210</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                    <input type="submit" value="Subscribe for Updates">
+                </form>
+            </section>
+        </main>
 
-        <!-- Image and External Link Section -->
-        <section class="media-section">
-            <img src="Logo.jpg" alt="Educesphere Logo">
-            <a href="https://www.youtube.com/@educesphere" target="_blank" class="youtube-link">Visit Educesphere on YouTube</a>
-        </section>
-    </main>
+        <!-- Sidebar -->
+        <aside>
+            <h2>Additional Links</h2>
+            <ul>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#news">News</a></li>
+                <li><input type="search" placeholder="Search..."></li>
+            </ul>
+        </aside>
+    </div>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Educesphere. All rights reserved.</p>
+            <p>&copy; 2024 Telemedicine Services. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.youtube.com" target="_blank">YouTube</a></p>
+            <p>Contact us at <a href="mailto:info@telemedicine.com">info@telemedicine.com</a></p>
         </div>
     </footer>
 </body>

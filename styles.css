@@ -1,145 +1,143 @@
-/* styles.css */
-
-/* Basic Reset */
-body, h1, h2, p, form, table, img, a {
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Container for Centered Content */
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
-/* Header Styling */
 header {
-    background-color: #0044cc;
-    color: #fff;
-    padding: 20px 0;
+    background: #f4f4f4;
+    padding: 10px 0;
     text-align: center;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-top: 5px;
-}
-
-/* Main Content Styling */
-main {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Introduction Section */
-.intro {
-    margin-bottom: 20px;
-}
-
-.intro h2 {
-    color: #0044cc;
-}
-
-/* Form Section */
-.form-section {
-    margin-bottom: 20px;
-}
-
-.form-section h2 {
-    color: #0044cc;
-    margin-bottom: 10px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-input[type="submit"] {
-    background-color: #0044cc;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-input[type="submit"]:hover {
-    background-color: #0033aa;
-}
-
-/* Table Styling */
-.table-section table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.table-section th,
-.table-section td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.table-section th {
-    background-color: #f4f4f4;
-    color: #0044cc;
-}
-
-/* Image Styling */
-.media-section img {
-    display: block;
-    max-width: 200px;
+header .logo {
+    max-width: 100px;
     height: auto;
-    margin: 20px auto;
 }
 
-/* External Link Styling */
-.youtube-link {
-    color: #0044cc;
+nav {
+    background: #333;
+    color: #fff;
+    position: relative;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
+    padding: 10px;
+    display: block;
 }
 
-.youtube-link:hover {
-    text-decoration: underline;
+.nav-links a:hover {
+    background: #555;
 }
 
-/* Footer Styling */
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+aside {
+    background: #e9e9e9;
+    padding: 20px;
+    margin-left: 20px;
+}
+
 footer {
-    background-color: #0044cc;
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav .nav-links.show {
+        display: flex;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav input[type="checkbox"] {
+        display: none;
+    }
+
+    nav input[type="checkbox"]:checked ~ .nav-links {
+        display: flex;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        max-width: 80px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
 }
